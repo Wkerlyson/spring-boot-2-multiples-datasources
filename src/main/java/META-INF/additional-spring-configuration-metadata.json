@@ -1,0 +1,17 @@
+{"properties": [
+  {
+    "name": "spring.datasource1.url",
+    "type": "java.lang.String",
+    "description": "A description for 'spring.datasource1.url'"
+  },
+  {
+    "name": "spring.datasource2.hikari.connection-test-query",
+    "type": "java.lang.String",
+    "description": "A description for 'spring.datasource2.hikari.connection-test-query'"
+  },
+  {
+    "name": "spring.datasource2.initialize",
+    "type": "java.lang.String",
+    "description": "A description for 'spring.datasource2.initialize'"
+  }
+]}
