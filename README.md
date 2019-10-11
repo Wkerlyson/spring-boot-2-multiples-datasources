@@ -6,7 +6,7 @@ The project is preconfigured to access two databases and use the tomcat connecti
 
 *  Change the connection properties of the *application-development.properties* and *application-production.properties* files.
 
-*  The *application.properties* file has a property called **spring.profiles.active**. This can take two values:
+*  The *application.properties* file has a property called **spring.profiles.active** that can take two values:
 
       * **development** - Configures the project with development profile. Thus, Spring reads the connection properties directly from the *application-development.properties* file, making it possible to use Spring Boot built-in tomcat.
       * **production** - Configures the project with production profile. Allowing spring to read the properties of the application-production.properties file and via JNDI to access the tomcat connection pool where War will be deployed.
