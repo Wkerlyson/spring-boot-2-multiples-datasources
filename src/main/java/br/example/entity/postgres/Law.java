@@ -1,4 +1,4 @@
-package br.uece.entity.postgres;
+package br.example.entity.postgres;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -7,21 +7,22 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "lei", schema = "pessoal")
-public class Lei {
+public class Law {
 
 	@Id
 	@Column(name = "id_lei")
 	private Long id;
 
 	@Column(name = "ds_lei")
-	private String ds_lei;
+	private String dsLaw;
 
-	public String getDs_lei() {
-		return ds_lei;
+
+	public String getDsLaw() {
+		return dsLaw;
 	}
 
-	public void setDs_lei(String ds_lei) {
-		this.ds_lei = ds_lei;
+	public void setDsLaw(String dsLaw) {
+		this.dsLaw = dsLaw;
 	}
 
 	public Long getId() {
@@ -48,7 +49,7 @@ public class Lei {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		Lei other = (Lei) obj;
+		Law other = (Law) obj;
 		if (id == null) {
 			if (other.id != null)
 				return false;

@@ -1,4 +1,4 @@
-package br.uece.exceptions;
+package br.example.exceptions;
 
 public class ObjectNotFoundException extends RuntimeException {
 	private static final long serialVersionUID = 1L;

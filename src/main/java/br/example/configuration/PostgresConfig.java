@@ -1,4 +1,4 @@
-package br.uece.configuration;
+package br.example.configuration;
 
 import javax.persistence.EntityManagerFactory;
 import javax.sql.DataSource;
@@ -20,12 +20,12 @@ import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
 import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
-import br.uece.entity.postgres.Lei;
-import br.uece.repository.postgres.LeiRepository;
+import br.example.entity.postgres.Law;
+import br.example.repository.postgres.LawRepository;
 
 @Configuration
 @EnableTransactionManagement
-@EnableJpaRepositories(basePackageClasses = LeiRepository.class, entityManagerFactoryRef = "postgresDSEmFactory", transactionManagerRef = "postgresDSTransactionManager")
+@EnableJpaRepositories(basePackageClasses = LawRepository.class, entityManagerFactoryRef = "postgresDSEmFactory", transactionManagerRef = "postgresDSTransactionManager")
 public class PostgresConfig {
 	
 	@Autowired
@@ -57,7 +57,7 @@ public class PostgresConfig {
 	@Primary
 	@Bean
 	public LocalContainerEntityManagerFactoryBean postgresDSEmFactory(@Qualifier("postgresDS") DataSource postgresDS, EntityManagerFactoryBuilder builder) {
-		return builder.dataSource(postgresDS).packages(Lei.class).persistenceUnit("postgres").build();
+		return builder.dataSource(postgresDS).packages(Law.class).persistenceUnit("postgres").build();
 	}
 	
 	@Primary

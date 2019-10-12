@@ -9,8 +9,8 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import br.uece.Application;
-import br.uece.service.ExemploService;
+import br.example.Application;
+import br.example.service.ExampleService;
 
 
 @RunWith(SpringRunner.class)
@@ -20,13 +20,13 @@ public class RepositoriesTest {
 	
 	
 	@Autowired
-	private ExemploService service;
+	private ExampleService service;
 	
 	
 	@Test
-	public void salvarEmDoisBancos() {
+	public void saveInTwoDatabases() {
 		try {
-			service.salvarEmDoisBancos();
+			service.saveInTwoDatabases();
 			assertTrue(true);
 		} catch (Exception e) {
 			e.printStackTrace();

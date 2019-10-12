@@ -1,4 +1,4 @@
-package br.uece.configuration;
+package br.example.configuration;
 
 import javax.persistence.EntityManagerFactory;
 import javax.sql.DataSource;
@@ -19,12 +19,12 @@ import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
 import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
-import br.uece.entity.sqlserver.Aluno;
-import br.uece.repository.sqlserver.AlunoRepository;
+import br.example.entity.sqlserver.Student;
+import br.example.repository.sqlserver.StudentRepository;
 
 @Configuration
 @EnableTransactionManagement
-@EnableJpaRepositories(basePackageClasses = AlunoRepository.class, entityManagerFactoryRef = "sqlServerDSEmFactory", transactionManagerRef = "sqlServerDSTransactionManager")
+@EnableJpaRepositories(basePackageClasses = StudentRepository.class, entityManagerFactoryRef = "sqlServerDSEmFactory", transactionManagerRef = "sqlServerDSTransactionManager")
 public class SQLServerConfig {
 
 	@Autowired
@@ -52,7 +52,7 @@ public class SQLServerConfig {
 	@Bean
 	public LocalContainerEntityManagerFactoryBean sqlServerDSEmFactory(@Qualifier("sqlServerDS") DataSource sqlServerDS,
 			EntityManagerFactoryBuilder builder) {
-		return builder.dataSource(sqlServerDS).packages(Aluno.class).persistenceUnit("sqlserver").build();
+		return builder.dataSource(sqlServerDS).packages(Student.class).persistenceUnit("sqlserver").build();
 	}
 
 	@Bean

@@ -1,4 +1,4 @@
-package br.uece.exceptions;
+package br.example.exceptions;
 
 import javax.servlet.http.HttpServletRequest;
 

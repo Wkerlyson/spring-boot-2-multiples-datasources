@@ -1,4 +1,4 @@
-package br.uece.entity.sqlserver;
+package br.example.entity.sqlserver;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -6,15 +6,15 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "Alunos", catalog = "ACADEMICO", schema = "dbo")
-public class Aluno {
+@Table(name = "Alunos", catalog = "ACAD", schema = "dbo")
+public class Student {
 
 	@Id
 	@Column(name = "CD_ALUNO")
 	private Long id;
 
 	@Column(name = "DS_NOME")
-	private String dsNome;
+	private String dsName;
 
 	public Long getId() {
 		return id;
@@ -24,12 +24,12 @@ public class Aluno {
 		this.id = id;
 	}
 
-	public String getDsNome() {
-		return dsNome;
+	public String getDsName() {
+		return dsName;
 	}
 
-	public void setDsNome(String dsNome) {
-		this.dsNome = dsNome;
+	public void setDsName(String dsName) {
+		this.dsName = dsName;
 	}
 
 	@Override
@@ -48,7 +48,7 @@ public class Aluno {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		Aluno other = (Aluno) obj;
+		Student other = (Student) obj;
 		if (id == null) {
 			if (other.id != null)
 				return false;
