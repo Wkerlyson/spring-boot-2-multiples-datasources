@@ -14,7 +14,7 @@ The project is preconfigured to access two databases and use the tomcat connecti
       Examples of datasources for production environment (context.xml):
       
 ``` xml
-<!-- PostgreSQL -->
+<!-- SQL Server -->
 <Resource auth="Container" driverClassName="com.microsoft.sqlserver.jdbc.SQLServerDriver" 
 	validationQuery="select 1" maxActive="2" maxIdle="2" maxWait="-1" name="jdbc/ALIAS" 
 	url="jdbc:sqlserver://IP_DATABASE:PORT;databaseName=NAME_DATABASE"
