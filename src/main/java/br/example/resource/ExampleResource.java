@@ -15,6 +15,7 @@ public class ExampleResource {
 
 	@Autowired
 	private ExampleService service;
+	
 
 	@GetMapping("/students/{id}")
 	public ResponseEntity<Student> findStudentById(@PathVariable Long id) {
